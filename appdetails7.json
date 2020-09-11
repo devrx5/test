@@ -1,0 +1,18 @@
+{
+  "ads":"true",
+  "update":[{
+    "version":"6",
+    "title":"Do you like this app? Check new version!",
+    "description":"",
+    "size":""
+  }],
+  "blocked":[
+    {"id":0, "app":"com.utorrent.client"},
+    {"id":1, "app":"com.torrent.client"},
+  ],
+  "free":[
+{"id":0, "file":0, "city":"Seattle (1)","country":"United States","image":"unitedstates","ip":"3.19.139.114","active":"true","signal":"a"},
+{"id":1, "file":1, "city":"Seattle (2)","country":"United States","image":"unitedstates","ip":"3.16.180.81","active":"true","signal":"a"},
+{"id":2, "file":2, "city":"Moscow (1)","country":"Russia","image":"russia","ip":"45.90.216.43","active":"true","signal":"a"}
+  ]
+}
