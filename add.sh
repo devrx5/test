@@ -15,6 +15,7 @@ new_client () {
 	sed -ne '/BEGIN OpenVPN Static key/,$ p' /etc/openvpn/server/tc.key
 	echo "</tls-crypt>"
 	} > ~/"$client".ovpn
+	cd
 	bash add.sh
 }
 
