@@ -33,5 +33,4 @@ EASYRSA_CERT_EXPIRE=3650 ./easyrsa build-client-full "$client" nopass
 new_client
 echo
 echo "$client добавлен. Конфиг тут:" ~/"$client.ovpn"
-bash add.sh
 exit
