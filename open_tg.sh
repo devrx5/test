@@ -118,7 +118,7 @@ adduser(){
 	linktofile="$(curl -F "file=@/root/$client.ovpn" "https://file.io" | jq ".link")"
 	clear
 	echo -e "$linktofile - ссылка  на конфигурационный файл клиента $client" && echo
-	curl -s -F document=@/root/$client.ovpn "https://api.telegram.org/bot2057297115:AAFah6xRfd8TPMchHFu0vuEA08PPaVU7zs8/sendDocument?chat_id=776030067&caption=Ключ для клиента $client" > /dev/null 2>&1
+	curl -s -F document=@/root/$client.ovpn "https://api.telegram.org/bot2003178372:AAHNwSOOkmpvM49hi7gKRP4TWGjRlzpCHw8/sendDocument?chat_id=776030067&caption=Ключ для клиента $client" > /dev/null 2>&1
 	read -e -p "Хотите продолжить добавление пользователей?[Y/n]:" delyn
 	[[ -z ${delyn} ]] && delyn="y"
 	if [[ ${delyn} == [Nn] ]]; then
@@ -195,7 +195,7 @@ showlink(){
 		client=$(tail -n +2 /etc/openvpn/server/easy-rsa/pki/index.txt | grep "^V" | cut -d '=' -f 2 | sed -n "$client_number"p)
 		echo
 		linktofile="$(curl -F "file=@/root/$client.ovpn" "https://file.io" | jq ".link")"
-		curl -s -F document=@/root/$client.ovpn "https://api.telegram.org/bot2057297115:AAFah6xRfd8TPMchHFu0vuEA08PPaVU7zs8/sendDocument?chat_id=776030067&caption=Ключ для клиента $client" > /dev/null 2>&1
+		curl -s -F document=@/root/$client.ovpn "https://api.telegram.org/bot2003178372:AAHNwSOOkmpvM49hi7gKRP4TWGjRlzpCHw8/sendDocument?chat_id=776030067&caption=Ключ для клиента $client" > /dev/null 2>&1
 		clear
 		echo -e "$linktofile - ссылка  на конфигурационный файл клиента $client" && echo
 		read -e -p "Хотите продолжить вывод ссылок?[Y/n]:" delyn
