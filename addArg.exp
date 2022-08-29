@@ -1,0 +1,15 @@
+#!/usr/bin/expect -f
+
+set username [lindex $argv 0]
+set password [lindex $argv 1]
+set day [lindex $argv 2]
+set limit [lindex $argv 3]
+
+set timeout 300
+spawn menu
+send -- "01\r"
+send -- "$username\r"
+send -- "$password\r"
+send -- "$day\r"
+send -- "$limit\r"
+expect eof
