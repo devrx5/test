@@ -7,10 +7,17 @@ set limit [lindex $argv 3]
 
 set timeout 1
 spawn menu
+expect "wait"
 send -- "01\r"
+expect "wait"
 send -- "\r"
+expect "wait"
 send -- "$username\r"
+expect "wait"
 send -- "$password\r"
+expect "wait"
 send -- "$day\r"
+expect "wait"
 send -- "$limit\r"
+expect "wait"
 expect eof
